@@ -18,6 +18,11 @@ rbenv_ruby GLOBAL_RUBY_VERSION do
   global true
 end
 
+directory "#{node[:rbenv][:root]}/versions" do
+  mode "2775"
+  recursive true
+end
+
 node[:site_rbenv][:global_ruby_gems].each do |g|
   rbenv_gem g do
     ruby_version GLOBAL_RUBY_VERSION
