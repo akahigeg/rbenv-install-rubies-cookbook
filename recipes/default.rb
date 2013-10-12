@@ -18,10 +18,6 @@ rbenv_ruby GLOBAL_RUBY_VERSION do
   global true
 end
 
-execute "set_group_write_to_all_versions" do
-  command "chmod 2775 -R #{node[:rbenv][:root]}/versions"
-end
-
 node[:site_rbenv][:global_ruby_gems].each do |g|
   rbenv_gem g do
     ruby_version GLOBAL_RUBY_VERSION
