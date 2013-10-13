@@ -1,31 +1,38 @@
 Chef cookbook of rbenv configure for your site.
 
-depends on [rbenv cookbook](https://github.com/RiotGames/rbenv-cookbook)
+## Depends
+
+* [rbenv cookbook](https://github.com/RiotGames/rbenv-cookbook)
 
 ## Attributes
 
-    node.default[:site_rbenv][:global_ruby_version] = '2.0.0-p247'
+    node.default[:rbenv_install_rubies][:global_version] = '2.0.0-p247'
 
 Specify global ruby version.
 
-    node.default[:site_rbenv][:global_ruby_gems] = ['bundler']
+    node.default[:rbenv_install_rubies][:other_versions] = []
 
-List preinstalled gems for global ruby.
+Specify other versions.
 
-    node.default[:site_rbenv][:lib_packages] = []
+    node.default[:rbenv_install_rubies][:gems] = ['bundler', 'rbenv-rehash', 'pry']
 
-List OS package names that is required by compiling ruby and some gems.
+List of preinstalled gems for global ruby.
+
+    node.default[:rbenv_install_rubies][:lib_packages] = []
+
+List of OS package names that is required by compiling ruby and some gems.
 
 ## Sample json
 
     {
       "run_list": [
-        "recipe[site-rbenv]"
+        "recipe[rbenv-install-rubies]"
       ],
       "site_rbenv": {
-        "global_ruby_version": "2.0.0-p247",
-        "global_ruby_gems": ["bundler", "rbenv-rehash"],
-        "lib_packages": ["libxml2-devel", "libxslt-devel", "openssl-devel"]
+        "global_version": "2.0.0-p247",
+        "other_versions": ["1.9.3-p448"],
+        "gems": ["bundler", "rbenv-rehash", "pry"],
+        "lib_packages": ["libxml2-devel", "libxslt-devel"]
       }
     }
 

@@ -26,7 +26,7 @@ OTHER_RUBY_VERSIONS.each do |v|
   end
 end
 
-all_versions = OTHER_RUBY_VERSIONS.push(GLOBAL_RUBY_VERSION)
+all_versions = OTHER_RUBY_VERSIONS + [GLOBAL_RUBY_VERSION]
 
 all_versions.each do |v|
   node[:rbenv_install_rubies][:gems].each do |g|
