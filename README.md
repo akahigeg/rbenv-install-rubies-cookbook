@@ -1,4 +1,4 @@
-Chef cookbook of rbenv installing rubyies that specified by node attributes.
+Chef cookbook of ruby install by rbenv. Can specify ruby versions into node attributes.
 
 ## Depends
 
