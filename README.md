@@ -8,7 +8,7 @@ Chef cookbook of ruby install by rbenv. Can specify ruby versions into node attr
 
 ### default
 
-Install rubyies that specified by node attributes.
+Install rubyies that specified in node attributes.
 
 ### keep-group-write
 
