@@ -30,8 +30,16 @@ all_versions = OTHER_RUBY_VERSIONS + [GLOBAL_RUBY_VERSION]
 
 all_versions.each do |v|
   node[:rbenv_install_rubies][:gems].each do |g|
-    rbenv_gem g do
-      ruby_version v
+    if g.is_a? Hash
+      gem_name = g.keys.first
+      rbenv_gem gem_name do
+        ruby_version v
+        version g[gem_name]["version"]
+      end
+    else
+      rbenv_gem g do
+        ruby_version v
+      end
     end
   end
 end
