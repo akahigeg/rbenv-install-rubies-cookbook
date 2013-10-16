@@ -1,20 +1,20 @@
 Chef cookbook of ruby install by rbenv. Can specify ruby versions into node attributes.
 
-## Depends
+# Depends
 
 * [rbenv](https://github.com/RiotGames/rbenv-cookbook)
 
-## Recipes
+# Recipes
 
-### default
+## default
 
 Install rubyies that specified in node attributes.
 
-### keep-group-write
+## keep-group-write
 
 To keep group write of rbenv versions directory for installing gems by rbenv group user.
 
-## Attributes
+# Attributes
 
 Global ruby version.
 
@@ -32,9 +32,9 @@ List of OS package names that is required by compiling ruby and some gems.
 
     node.default[:rbenv_install_rubies][:lib_packages] = []
 
-## Sample json
+# Sample json
 
-### Just install rubies
+## Just install rubies
 
     {
       "run_list": [
@@ -48,7 +48,7 @@ List of OS package names that is required by compiling ruby and some gems.
       }
     }
 
-### With keep group write feature
+## With keep group write feature
 
     {
       "run_list": [
@@ -66,7 +66,7 @@ List of OS package names that is required by compiling ruby and some gems.
       }
     }
 
-## Specs
+# Specs
 
 This cookbook is tested by below things.
 
@@ -74,7 +74,7 @@ This cookbook is tested by below things.
 * [Vagrant](http://www.vagrantup.com/)
 * [Berkshelf](http://berkshelf.com/)
 
-### How to run specs
+## How to run specs
 
     $ git clone https://github.com/akahigeg/rbenv-install-rubies-cookbook.git
     $ cd rbenv-install-rubies-cookbook
