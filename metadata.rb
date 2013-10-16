@@ -3,7 +3,7 @@ maintainer       "akahigeg"
 maintainer_email "akahigeg@gmail.com"
 license          "MIT"
 description      "Install ruby by using rbenv"
-version          "0.2"
+version          "0.2.1"
 depends          "rbenv"
 
 recipe "rbenv-install-rubies::default", "Install rubyies that specified in node attributes."

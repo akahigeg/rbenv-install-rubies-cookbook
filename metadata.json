@@ -35,5 +35,5 @@
     "rbenv-install-rubies::default": "Install rubyies that specified in node attributes.",
     "rbenv-install-rubies::keep-group-write": "To keep group write of rbenv versions directory for installing gems by rbenv group user."
   },
-  "version": "0.2.0"
+  "version": "0.2.1"
 }

@@ -81,3 +81,20 @@ This cookbook is tested by below things.
     $ vagrant up
     $ bundle install
     $ bundle exec rake spec
+
+# Tips
+
+## For ruby 1.8.7 system    
+
+Latest version of rbenv cookbook dose not support ruby 1.8.7 already.
+But ruby 1.8.7 is still preinstalled on many environment.
+
+You need to specify rbenv cookbook version on ruby 1.8.7 systems.
+
+This is Berkfile sample.
+
+    site :opscode
+    
+    # for Applications
+    cookbook 'rbenv', '~> 1.5.0' # for Ruby 1.8.7 system
+    cookbook 'rbenv-install-rubies'
