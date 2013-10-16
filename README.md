@@ -14,6 +14,8 @@ Install rubyies that specified in node attributes.
 
 To keep group write of rbenv versions directory for installing gems by rbenv group user.
 
+This feature is using cron.
+
 # Attributes
 
 Global ruby version.
