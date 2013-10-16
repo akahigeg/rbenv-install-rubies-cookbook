@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: site-rbenv
+# Cookbook Name:: rbenv-install-rubies 
 # Recipe:: default
 #
 
